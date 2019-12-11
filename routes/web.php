@@ -11,20 +11,10 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('', [
+	'as'=>'home', 'uses'=>'GetController@GetHome'
+]);
 
-
-
-// Route::get('home', function () {
-//     echo "Trang Chủ";
-// });
-
-// Route::post('post', function () {
-//     echo "Trang Chủ post";
-// });
-
-Route::get('home', 'momoController@home');
-Route::post('home', 'momoController@posthome');
-
+Route::get('/detail', [
+	'as'=>'detail', 'uses'=>'GetController@GetDetail'
+]);
